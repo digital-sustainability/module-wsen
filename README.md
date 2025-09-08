@@ -47,10 +47,18 @@ Damit Renkulab **automatisch** deine Arbeiten speichern kann musst du eine  **Ko
 Unter **Sessions** klicke auf das **+** Zeichen
 Mache folgende Einstellungen im Modal welches sich öffnet:
 
-<img src="./images/session_settings.png">
+<img src="./images/session_settings.png" width="100%">   
 
 Klicke auf **Next** und im folgenden Fenster auf **Add Session Launcher**
 
 Danach kann die Session gestartet werden:
 
-<img src="./images/start_session.png">
+<img src="./images/start_session.png" width="100%">
+
+## Starten von Codes
+
+Nach dem Starten der Session sollte sich folgender Bildschirm öffnen:
+
+<img src="./images/vscodium-start.png" width="100%">
+
+Die Unterlagen für den Unterricht finden sich im Ordner "module-wsen -> notebooks -> Unterricht"
