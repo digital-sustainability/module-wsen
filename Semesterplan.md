@@ -11,6 +11,6 @@
 | 9 | 46 | • Tuples<br>• **Dictionaries** |  | 
 | 10 | 47 | • Lambdas<br>• Rekursion |  |
 | 11 | 48 | Kurztest 2: 2 x 15 Minuten | • Vererbung | 
-| 12 | 49 |  |  | 
+| 12 | 49 | • Comprehensions <br> • String formatierungen  |  | 
 | 13 | 50 |  | • Synthese - Entwicklung einer 3-Tier Anwendung |
 | 14 | 51 |  | • Modulevaluation<br>• Prüfungsvorbereitung inhaltlich (Q&A)<br>• Prüfungsvorbereitung technisch (Lernstick / Kampla)<br>• Zätzlicher Kurztest falls notwendig? |
