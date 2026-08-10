@@ -62,6 +62,14 @@ Suggested changes:
 - Add a very simple infinite-loop example with an explanation.
 - Include one exercise focused on tracing loop behavior rather than only writing new code.
 
+Actionable plan for Week 4:
+1. Review the current while/for sections in [notebooks/Unterricht/Woche_4/01_Unterricht.ipynb](notebooks/Unterricht/Woche_4/01_Unterricht.ipynb) and note where beginners are likely to get confused about state changes, loop conditions, and termination.
+2. Add a short, explicit explanation before the first loop example that shows what changes in each iteration (for example, the value of `i` or a counter) and why the loop stops once the condition is no longer true.
+3. Insert one very simple infinite-loop example with a short note explaining what happens and how to interrupt the notebook kernel.
+4. Add one tracing-focused exercise that asks students to predict the values after each iteration or the final result, rather than only asking them to write new code from scratch.
+5. Update [notebooks/Unterricht/Woche_4/02_Aufgaben.ipynb](notebooks/Unterricht/Woche_4/02_Aufgaben.ipynb) and [notebooks/Unterricht/Woche_4/03_Loesungen.ipynb](notebooks/Unterricht/Woche_4/03_Loesungen.ipynb) so the exercise and solution match the new teaching sequence and include the new tracing task.
+6. Do a quick readability pass to keep the lesson aligned with the course-wide structure: short overview, learning goals, one main concept at a time, one worked example, one mini-check, and a short summary.
+
 ### Week 5
 File:
 - [notebooks/Unterricht/Woche_5/01_Unterricht.ipynb](notebooks/Unterricht/Woche_5/01_Unterricht.ipynb)
