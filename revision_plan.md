@@ -130,6 +130,15 @@ Suggested changes:
 - Avoid introducing too many OOP concepts at once.
 - Make the business-object connection more explicit.
 
+Actionable plan for Week 8:
+1. Review [notebooks/Unterricht/Woche_8/01_Unterricht.ipynb](notebooks/Unterricht/Woche_8/01_Unterricht.ipynb) and mark the points where the lesson moves from introducing OOP vocabulary to showing a concrete example, so the progression feels gradual rather than rushed.
+2. Rebuild the lesson flow around the sequence class → object → attribute → method, using one everyday analogy before introducing Python syntax (for example, a car, a book, or a student object).
+3. Add a short plain-language introduction that explains what a class is, what an object is, and why this matters in programming, before the first code example.
+4. Keep the first worked example simple: one class, one attribute, and one method. Introduce additional OOP ideas only after students have seen that basic pattern.
+5. Make the bridge to business objects explicit by showing a simple real-world example (for example, a student, product, or order) and connecting its attributes and methods to the idea of a business object and its relation to an ERD.
+6. Update [notebooks/Unterricht/Woche_8/02_Aufgaben.ipynb](notebooks/Unterricht/Woche_8/02_Aufgaben.ipynb) and [notebooks/Unterricht/Woche_8/03_Loesungen.ipynb](notebooks/Unterricht/Woche_8/03_Loesungen.ipynb) so the exercises reinforce the same learning sequence and include at least one task where students identify attributes and methods before writing code.
+7. Do a quick readability pass to keep the lesson aligned with the course-wide structure: short overview, learning goals, one main concept at a time, one worked example, one mini-check, and a short summary.
+
 ### Week 9
 File:
 - [notebooks/Unterricht/Woche_9/01_Unterricht.ipynb](notebooks/Unterricht/Woche_9/01_Unterricht.ipynb)
