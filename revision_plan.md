@@ -106,6 +106,15 @@ Suggested changes:
 - Use a beginner-friendly input example that handles invalid input safely.
 - Make the purpose of exception handling more concrete.
 
+Actionable plan for Week 7:
+1. Review [notebooks/Unterricht/Woche_7/01_Unterricht.ipynb](notebooks/Unterricht/Woche_7/01_Unterricht.ipynb) and mark where the lesson moves from introducing errors to explaining try/except, so the transition feels gradual rather than abrupt.
+2. Add a short introductory section before the first try/except example that explains, in plain language, what an error is and why Python reports it.
+3. Insert a simple comparison of syntax errors, runtime errors, and logical errors with one very short example of each, using beginner-friendly wording and keeping the explanation focused on the difference in when and why each occurs.
+4. Replace or expand the input example so it shows a safe, beginner-friendly interaction with invalid input (for example, entering text instead of a number) and demonstrates how exception handling can recover gracefully.
+5. Make the purpose of exception handling more concrete by showing a before/after example: the program stops on invalid input versus the program asks again or gives a helpful message.
+6. Update [notebooks/Unterricht/Woche_7/02_Aufgaben.ipynb](notebooks/Unterricht/Woche_7/02_Aufgaben.ipynb) and [notebooks/Unterricht/Woche_7/03_Loesungen.ipynb](notebooks/Unterricht/Woche_7/03_Loesungen.ipynb) so the exercises and solutions match the new teaching sequence and include at least one task on handling invalid input.
+7. Do a quick readability pass to keep the lesson aligned with the course-wide structure: short overview, learning goals, one main concept at a time, one worked example, one mini-check, and a short summary.
+
 ### Week 8
 File:
 - [notebooks/Unterricht/Woche_8/01_Unterricht.ipynb](notebooks/Unterricht/Woche_8/01_Unterricht.ipynb)
