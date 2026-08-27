@@ -1,97 +1,55 @@
-# **Projekt: Rechnungssystem für ein Handelsunternehmen**
+# Projektbeschreibung: Rechnungssystem
 
----
+## Ziel
 
-## **Übersicht**
-Entwicklung eines **Rechnungssystems** für ein Handelsunternehmen, das die Erstellung, Verwaltung und Nachverfolgung von Rechnungen automatisiert. Das System soll Kundendaten, Rechnungspositionen und variable Mehrwertsteuersätze (gemäß Schweizer Steuerrecht) verarbeiten.
+Entwickelt wird eine kleine 3-Tier-Anwendung zur Verwaltung von Kunden und
+Artikeln sowie zur Erstellung prüfbarer Rechnungen. Die Anwendung verwendet
+die gemeinsame Datenbasis in `data/` und berechnet Schweizer MWST-Sätze
+dynamisch.
 
----
+## Datenmodell
 
-## **Kernanforderungen**
+Eine Rechnung wird maschinenlesbar in dieser Form dargestellt:
 
-### **1. Rechnungsstruktur**
-Jede Rechnung **muss** folgende Elemente enthalten:
-
-- **Kopfzeile**
-  - Rechnungsdatum und -uhrzeit
-  - Kundendaten:
-    - Kundennummer
-    - Name
-    - Adresse
-
-- **Rechnungspositionen**
-  Jede Position **muss** folgende Felder aufweisen:
-  - Positionsnummer
-  - Artikelnummer und Artikelbezeichnung
-  - Anzahl der Artikel
-  - Einzelpreis
-  - Gesamtpreis der Position (berechnet: `Anzahl × Einzelpreis`)
-  - **Mehrwertsteuersatz** (artikelabhängig):
-    - 7,7 % (Normalsteuersatz)
-    - 3,7 % (Reduzierter Satz)
-    - 2,5 % (Spezialsatz)
-    - 0 % (Steuerbefreit)
-
----
-
-### **2. Wichtige Funktionen**
-- **Kundenverwaltung**
-  - Speichern und Abrufen von Kundenprofilen (ID, Name, Adresse).
-- **Artikeldatenbank**
-  - Pflege eines Artikelkatalogs mit:
-    - Artikelnummer
-    - Bezeichnung
-    - Standard-Mehrwertsteuersatz
-    - Einzelpreis
-- **Rechnungserstellung**
-  - Automatische Berechnung der Positionsgesamtsummen und Mehrwertsteuerbeträge.
-  - Unterstützung **mehrerer Steuersätze pro Rechnung**.
-  - Generierung von PDF-/druckbaren Rechnungen.
-- **Datenvalidierung**
-  - Prüfung auf fehlende Felder (Kunde, Artikel, Preise).
-  - Validierung der Steuersätze gemäß Schweizer Vorgaben.
-
----
-
-### **3. Technische Aspekte**
-- **Datenmodell (Beispiel)**:
-  ```json
-  {
-    "rechnung": {
-      "id": "RE-2026-001",
-      "datum": "2026-08-27T10:00:00+02:00",
-      "kunde": {
-        "id": "K-123",
-        "name": "Marcel Gygli",
-        "adresse": "Rue de la Corraterie, Genf"
+```json
+{
+  "rechnung_id": 1,
+  "datum": "2024-11-01",
+  "kunde": {
+    "kundennummer": "K-100",
+    "name": "Alpenblick AG",
+    "adresse": "Bahnhofstrasse 1, 8000 Zürich"
+  },
+  "positionen": [
+    {
+      "positionsnummer": 1,
+      "artikel": {
+        "artikelnummer": "A-10",
+        "bezeichnung": "Beratung",
+        "einzelpreis": 150.0
       },
-      "positionen": [
-        {
-          "positionsnummer": 1,
-          "artikel": {
-            "nummer": "A-456",
-            "bezeichnung": "Produkt X",
-            "mwst_satz": 7.7
-          },
-          "anzahl": 5,
-          "einzelpreis": 100.00,
-          "positionsgesamt": 500.00
-        }
-      ],
-      "summen": {
-        "zwischensumme": 500.00,
-        "mwst": { "7,7%": 38.50 },
-        "endbetrag": 538.50
-      }
+      "menge": 2,
+      "mwst_satz": 7.7,
+      "betrag": 300.0
     }
+  ],
+  "summen": {
+    "zwischensumme": 300.0,
+    "mwst": {"7.7": 23.1},
+    "gesamtbetrag": 323.1
   }
-  ```
-- **Lokalisierung**: Unterstützung für **Deutsch, Französisch, Italienisch** (Schweiz) und Währung **CHF**.
-- **Compliance**: Einhaltung der Schweizer Mehrwertsteuergesetze (z. B. [ESTV-Richtlinien](https://www.estv.admin.ch)).
+}
+```
 
----
-## **Erfolgsfaktoren**
-✅ Rechnungen sind **korrekt**, **prüfbar** und **rechtssicher**.
-✅ System verarbeitet **dynamische Steuersätze pro Position**.
-✅ Kunden und Artikel sind **einfach verwaltbar**.
-✅ Ausgaben sind **maschinenlesbar (JSON/CSV)** und **menschenlesbar (PDF)**.
+Erlaubte MWST-Sätze sind `7.7`, `3.7`, `2.5` und `0.0` Prozent. Geldbeträge
+werden in CHF geführt und auf zwei Nachkommastellen gerundet. Die Feldnamen
+und die Verschachtelung sind verbindlich und werden ab SW9 verwendet.
+
+## 3-Tier-Aufteilung
+
+- **Daten:** SQLite/CSV mit Kunden, Artikeln, Rechnungen und Positionen.
+- **Businesslogik:** Validierung, Positionssummen, MWST und Rechnungstypen.
+- **Präsentation:** druckbare CHF-Rechnung sowie JSON- und CSV-Export.
+
+Die Wochen 1–12 führen schrittweise in diese Bestandteile ein. In Woche 13
+werden sie integriert; Woche 14 dient Präsentation, Reflexion und Evaluation.
