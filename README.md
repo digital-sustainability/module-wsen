@@ -1,9 +1,16 @@
 
-# Software-Entwicklung HS25
+# Software Development HS26
 
 ## Einführung
 
-In diesem Projekt findest du alle Unterlagen für das Semester HS25 des Moduls Software-Entwicklung an der Berner Fachhochschule.
+In diesem Projekt findest du alle Unterlagen für das Semester HS26 des Moduls Software Development an der Berner Fachhochschule.
+
+## Anmelden auf Gitlab der BFH
+- Melde dich auf unserer [Gitlab](https://gitlab.ti.bfh.ch/) Instanz an.
+  - Nur mit Kürzel (z.b. ggm7) und Passwort.
+  - Richte 2FA / Passkey ein und notiere dir den Recovery Code.
+
+- Sende eine E-Mail mit dem Kürzel an marcel.gygli@bfh.ch dann können wir dich auf dem [Projekt](https://gitlab.ti.bfh.ch/digital-sustainability-lab/lehre/wsdv) freischalten
 
 ## Arbeiten mit Renkulab
 
@@ -11,7 +18,7 @@ Um den Einstieg ins Programmieren nicht mit Installieren und Konfigurieren von S
 
 ## Repository forken
 
-Damit Renkulab **automatisch** deine Arbeiten speichern kann musst du eine  **Kopie** erstellen. Gehe dazu folgendermassen vor:
+Damit Renkulab **automatisch** deine Arbeiten speichern kann musst du deine eigene Instanz erstellen. Gehe dazu folgendermassen vor:
 
 ### Erstelle einen Account
 
@@ -24,13 +31,13 @@ Damit Renkulab **automatisch** deine Arbeiten speichern kann musst du eine  **Ko
 <img src="./images/edu_id.png" width="100%">
 
 ### Erstelle eine Kopie
-- Öffne das Grundprojekt: [HS25](https://renkulab.io/p/marcel.gygli/hs25)
+- Öffne das Grundprojekt: [HS26](https://renkulab.io/p/marcel.gygli/wsdv-hs26)
 
-- Klicke rechts bei **Info** auf die **3Punkte** und dann **Copy Project**:
+- Klicke rechts bei **Info** auf **das Icon** und dann **Copy Project**:
 
 <img src="./images/copy.png" width="100%">
 
-- Wähle im Modal die Einstellung **Private** und klicke auf **Copz*
+- Wähle im Modal die Einstellung **Private** und klicke auf **Copy*
 
 <img src="./images/copy_2.png" width="100%">
 
