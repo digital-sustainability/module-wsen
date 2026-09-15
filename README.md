@@ -30,6 +30,15 @@ Damit Renkulab **automatisch** deine Arbeiten speichern kann musst du deine eige
 
 <img src="./images/edu_id.png" width="100%">
 
+### Linken des Gitlab Accounts
+- Klicke auf das Profilbild (oben rechts) und wähle "Integrations"
+- Klicke auf das +
+<img src="./images/add_integration.png" width="100%">
+- Suche nach "BFH" und klicke auf "Connect"
+<img src="./images/bfh_integration.png" width="100%">
+- Melde dich im geöffneten Fenster mit deinem Gitlab Account an
+- Danach ist Gitlab verbunden
+
 ### Erstelle eine Kopie
 - Öffne das Grundprojekt: [HS26](https://renkulab.io/p/marcel.gygli/wsdv-hs26)
 
