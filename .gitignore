@@ -336,3 +336,4 @@ tags
 .renku.lock
 .renku/tmp
 .renku/cache
+notebooks/Unterricht/Woche_5/Musterlösung/example.db
